@@ -1,0 +1,20 @@
+.password_field {
+  margin-right:31px
+}
+.name_field{
+  margin-right:8px
+}
+.profession_field{
+  margin-right:130px
+}
+
+.btn{
+  background-color: green;
+  border: none;
+  color: white;
+  padding: 11px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}

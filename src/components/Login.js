@@ -1,68 +1,75 @@
-import React, { Component } from 'react'
-import { login } from './UserFunctions'
-import axios from 'axios'
+import React, { Component } from "react";
+import "./signup.css";
 
 class Login extends Component {
   constructor() {
-    super()
+    super();
     this.state = {
-      email: '',
-      password: '',
-      errors: false
-    }
-
-    this.onChange = this.onChange.bind(this)
-    this.onSubmit = this.onSubmit.bind(this)
+      email: "",
+      password: "",
+      errors: false,
+    };
   }
 
-  onChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
-  }
-  onSubmit(e) {
-    e.preventDefault()
+  onChange = (e) => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+  onSubmit = (e) => {
+    e.preventDefault();
 
-    let emailid = localStorage.getItem('email')
-    let passid = localStorage.getItem('password')
+    let emailid = localStorage.getItem("email");
+    let passid = localStorage.getItem("password");
 
-    if(emailid === this.state.email && passid === this.state.password) {
-            console.log('User Logged in')
-    }
-    else {
-        this.setState ( {
-            errors : true
-        })
-        throw 'error occurs';
+    if (emailid === this.state.email && passid === this.state.password) {
+      console.log("User succesfully Logged in");
+    } else {
+      this.setState({
+        errors: true,
+      });
     }
 
-    const user = {
-      email: this.state.email,
-      password: this.state.password
-    }
-
-    this.props.history.push('/success')
-    
-
-  }
+    this.props.history.push("/success");
+  };
 
   render() {
     return (
-        <form align="center" onSubmit={this.onSubmit}>
-            <h1>Sign-In</h1>
-            
-            <b>Email</b> : <input type="email" name="email" placeholder="Enter email id" value={this.state.email} onChange={this.onChange}/><br/><br/>
-            <b>password</b> : <input type="password" name="password" value={this.state.password} onChange={this.onChange}/><br/><br/>
-            
-            <button type="submit">Submit</button><br></br>
-            <a href="/signup">Already registered? Sign in here</a>
-            
-            {this.state.errors && <p style={{color: "red"}}>Either USername or password is incorrect!!</p>}
-            <br/><br/>
-
-            <a href="/about">About Us</a>
-        </form>
-        )
-    }
+      <form align="center" onSubmit={this.onSubmit}>
+        <h1>Sign-In</h1>
+        <b>Email</b> :{" "}
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter email id"
+          value={this.state.email}
+          onChange={(e) => this.onChange(e)}
+        />
+        <br />
+        <br />
+        <b>password</b> :{" "}
+        <input
+          className="password_field"
+          type="password"
+          name="password"
+          value={this.state.password}
+          onChange={(e) => this.onChange(e)}
+        />
+        <br />
+        <br />
+        <button type="submit" className="btn">
+          Submit
+        </button>
+        <br></br>
+        <br></br>
+        {this.state.errors && (
+          <p style={{ color: "red" }}>
+            Either USername or password is incorrect!!
+          </p>
+        )}
+        <br />
+        <a href="/about">About Us</a>
+      </form>
+    );
+  }
 }
 
-export default Login
-
+export default Login;

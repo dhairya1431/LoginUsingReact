@@ -1,0 +1,19 @@
+.container__item {
+  display: flex;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top:10px
+}
+
+.container__wrapper{
+  margin:0px 25px;
+}
+
+.image{
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+  border-radius: 5px;
+}

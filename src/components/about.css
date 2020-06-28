@@ -1,0 +1,17 @@
+.item {
+  display: flex;
+}
+
+.value{
+  margin-left:10px
+}
+
+.address{
+  margin-left:22px
+}
+.phone{
+  margin-left:32px
+}
+.email{
+  margin-left:42px
+}
