@@ -1,0 +1,32 @@
+{
+    "message": "success",
+    "code": 1,
+    "movie": [
+      {
+        "director": [
+          "Smeep Kang"
+        ],
+        "stars": [
+          "Gippy Grewal"
+        ],
+        "pageViews": 320,
+        "_id": "5d5a7abde7dfda23f8ee7686",
+        "title": "Phatte Dinde Chakk Punjabi",
+        "language": "Punjabi",
+        "poster": "https://hoblist.s3.ap-south-1.amazonaws.com/movies/poster/1566460907551_cccccccccccc.jpeg"
+      },
+        {
+        "director": [
+          "Vipul Motaka"
+        ],
+        "stars": [
+          "Poorva rupala"
+        ],
+        "pageViews": 810,
+        "_id": "5d5a7abde7dfda23f8ee7623",
+        "title": "Romentic pair",
+        "language": "Gujarati",
+        "poster": "https://hoblist.s3.ap-south-1.amazonaws.com/movies/poster/1566460907551_cccccccccccc.jpeg"
+      }
+    ]
+  }
